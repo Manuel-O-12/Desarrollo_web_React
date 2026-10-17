@@ -1,0 +1,179 @@
+/* src/components/MtgLifeCounter.css */
+/* Estilos del contador de vida MTG – Entregable 1 */
+
+/* ---------- Reset base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* ---------- Contenedor principal ---------- */
+.mtg-life-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  gap: 2.5rem;
+}
+
+/* ---------- Título ---------- */
+.app-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #c9a84c;
+  text-shadow: 0 2px 8px rgba(201, 168, 76, 0.45);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* ---------- Fila de jugadores ---------- */
+.players-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 860px;
+}
+
+/* ---------- Separador VS ---------- */
+.divider {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #c9a84c;
+  user-select: none;
+}
+
+/* ---------- Tarjeta de jugador ---------- */
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  background: linear-gradient(145deg, #16213e, #0f3460);
+  border: 2px solid #c9a84c;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  width: 280px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ---------- Nombre del jugador ---------- */
+.player-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #c9a84c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---------- Número de vida ---------- */
+.life-display {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 2px 12px rgba(255, 255, 255, 0.2);
+  transition: color 0.3s ease;
+}
+
+/* ---------- Controles (+1 / -1) ---------- */
+.player-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.55rem 1.4rem;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Botón +1 */
+.btn-increase {
+  background-color: #2d6a4f;
+  color: #d8f3dc;
+}
+
+.btn-increase:hover {
+  background-color: #40916c;
+  box-shadow: 0 4px 12px rgba(64, 145, 108, 0.5);
+}
+
+/* Botón -1 */
+.btn-decrease {
+  background-color: #9b2226;
+  color: #ffddd2;
+}
+
+.btn-decrease:hover {
+  background-color: #c1121f;
+  box-shadow: 0 4px 12px rgba(193, 18, 31, 0.5);
+}
+
+/* Botón Reiniciar */
+.btn-reset {
+  background-color: #c9a84c;
+  color: #1a1a2e;
+  font-size: 1.05rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
+.btn-reset:hover {
+  background-color: #e9c46a;
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.5);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .app-title {
+    font-size: 1.7rem;
+  }
+
+  .players-container {
+    flex-direction: column;
+  }
+
+  .divider {
+    font-size: 1.4rem;
+  }
+
+  .player-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .life-display {
+    font-size: 4rem;
+  }
+}
