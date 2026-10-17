@@ -1,5 +1,5 @@
 /* src/components/MtgLifeCounter.css */
-/* Estilos del contador de vida MTG – Entregable 1 */
+/* Estilos del contador de vida MTG – Entregable 1 y 2 */
 
 /* ---------- Reset base ---------- */
 *,
@@ -77,13 +77,32 @@ body {
   transform: translateY(-4px);
 }
 
-/* ---------- Nombre del jugador ---------- */
-.player-name {
-  font-size: 1.3rem;
-  font-weight: 600;
+/* ---------- Input de nombre del jugador (Entregable 2) ---------- */
+.player-name-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #c9a84c;
   color: #c9a84c;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding: 0.3rem 0.2rem;
+  outline: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.player-name-input::placeholder {
+  color: rgba(201, 168, 76, 0.45);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.player-name-input:focus {
+  border-bottom-color: #e9c46a;
+  color: #e9c46a;
 }
 
 /* ---------- Número de vida ---------- */
